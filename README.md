@@ -25,9 +25,3 @@ The tool produces a **desk-style report** with a transparent **PASS/FAIL rule**,
 
 ### Requirements
 - Python 3.9+ (no external dependencies)
-
-### Run
-Clone the repo and run the script (or paste into a notebook):
-
-```bash
-python your_script_name.py
