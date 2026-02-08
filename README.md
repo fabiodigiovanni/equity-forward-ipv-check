@@ -21,29 +21,6 @@ The tool produces a **desk-style report** with a transparent **PASS/FAIL rule**,
 
 ---
 
-## Method (high level)
-
-**Carry-based forward**
-- \( F_{\text{carry}} = S_0 \cdot e^{(r - q)\,T} \)
-
-**Options-implied forward (put–call parity, European framework)**
-- \( F_{\text{parity}} = K + e^{rT}\,(C - P) \)
-
-**Difference**
-- \( \Delta F = F_{\text{parity}} - F_{\text{carry}} \)
-
-**Effective tolerance**
-- `tol_eff = max(tol_abs, tol_bps * F_carry / 10,000)`
-
-**Decision rule**
-- PASS if `|ΔF| <= tol_eff`, otherwise FAIL
-
-**Diagnostics**
-- Implied net carry `q_impl` that reconciles the carry model with `F_parity`
-- `Δq (bps) = (q_impl - q_input) * 10,000`
-
----
-
 ## Quickstart
 
 ### Requirements
